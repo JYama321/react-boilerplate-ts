@@ -4,6 +4,7 @@
     "sourceMap": true,
     "noImplicitAny": true,
     "strict": true,
+    "strictNullChecks": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "allowUnreachableCode": false,
@@ -21,9 +22,13 @@
       "es2018"
     ]
   },
+  "include": [
+    "./src/**/*"
+  ],
   "exclude": [
     "node_modules",
     "dist",
-    "src/index.html"
+    "src/index.html",
+    "**/*.spec.ts"
   ]
 }
