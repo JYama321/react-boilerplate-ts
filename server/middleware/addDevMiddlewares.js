@@ -14,7 +14,7 @@ function createwebpackMiddleware(compiler, publicPath) {
 }
 
 module.exports = function addDevMiddlewares(app, webpackConfig) {
-    const compiler = webpack(webpjjackConfig);
+    const compiler = webpack(webpackConfig);
     const middleware = createwebpackMiddleware(
         compiler,
         webpackConfig.output.publicPath

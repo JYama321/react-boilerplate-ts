@@ -1,0 +1,28 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended",
+        "tslint-react",
+        "tslint-config-prettier"
+    ],
+    "jsRules": {},
+    "rules": {
+        "prettier": [true, {
+            "semi": false
+        }],
+        "no-console": false,
+        "variable-name": [
+            true,
+            "ban-keywords",
+            "check-format",
+            "allow-pascal-case",
+            "allow-leading-underscore"
+        ],
+        "no-var-requires": false,
+        "interface-name": false
+    },
+    "rulesDirectory": ["tslint-plugin-prettier"],
+    "linterOptions": {"exclude": [
+        "./app/**/*.html"
+    ]}
+}

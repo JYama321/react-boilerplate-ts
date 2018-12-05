@@ -1,25 +1,39 @@
 const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CircularDependencyPlugin = require('circular-dependency-plugin');
 
-module.exports = {
-    entry: path.join(process.cwd(),"app/index.tsx"),
-    output: {
-        filename: "bundle.js",
-        path: path.join(process.cwd(),"dist")
-    },
-    devtool: "source-map",
 
-    resolve: {
-        extensions: [".ts",".tsx", ".js", ".json"]
-    },
+module.exports = require('./webpack.config.base')({
+  mode: 'development',
+  entry: [
+    require.resolve('react-app-polyfill/ie11'),
+    path.join(process.cwd(),"src/index.tsx")
+  ],
 
-    module: {
-        rules: [
-            { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
-            { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
-        ]
-    },
-    externals: {
-        "react": "React",
-        "react-dom": "ReactDOM"
+  output: {
+    filename: "[name].js",
+    chunkFilename: '[name].chunk.js',
+  },
+
+  optimization: {
+    splitChunks: {
+        chunks: 'all',
     }
-};
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: path.join(process.cwd(),'src/index.html')
+    }),
+    new CircularDependencyPlugin({
+      exclude: /a\.js|node_modules/,
+      failOnError: false,
+    })
+  ],
+  devtool: "eval-source-map",
+  performance: {
+      hints: false,
+  }
+});
