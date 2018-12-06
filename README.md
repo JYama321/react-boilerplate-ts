@@ -29,3 +29,7 @@ React,Redux,
 
 ### Styled-components
 [styled-components-typescript example](https://github.com/patrick91/Styled-Components-Typescript-Example)
+
+
+### Typescript-react-redux
+[https://medium.com/@resir014/redux-4-typescript-2-9-a-type-safe-approach-7f073917b803](https://medium.com/@resir014/redux-4-typescript-2-9-a-type-safe-approach-7f073917b803)

@@ -14,7 +14,6 @@ const { resolve } = require('path');
 const app = express();
 
 
-
 setup(app, {
   outputPath: resolve(process.cwd(), 'dist'),
   publicPath: '/'

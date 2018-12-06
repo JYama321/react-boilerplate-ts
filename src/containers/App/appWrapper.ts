@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const AppWrapper: any = styled.div`
   max-width: calc(768px + 16px * 2);
@@ -7,4 +7,4 @@ export const AppWrapper: any = styled.div`
   min-height: 100%;
   padding: 0 16px;
   flex-direction: column;
-`;
+`

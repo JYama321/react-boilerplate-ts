@@ -1,9 +1,9 @@
 // @ts-ignore
-import { Hello } from "components/Hello";
-import * as React from "react";
-import { Helmet } from "react-helmet";
-import { Route, Switch } from "react-router-dom";
-import { AppWrapper } from "./appWrapper";
+import { Hello } from "components/Hello"
+import * as React from "react"
+import { Helmet } from "react-helmet"
+import { Route, Switch } from "react-router-dom"
+import { AppWrapper } from "./appWrapper"
 
 export default function App(): any {
   return (
@@ -22,5 +22,5 @@ export default function App(): any {
         />
       </Switch>
     </AppWrapper>
-  );
+  )
 }
