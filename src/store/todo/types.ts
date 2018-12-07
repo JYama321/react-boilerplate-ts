@@ -4,7 +4,7 @@ export interface Todo {
 }
 
 export interface TodoState {
-  todo: Todo[];
+  readonly todo: Todo[];
 }
 export const initialTodoState: TodoState = {
   todo: []
