@@ -1,19 +1,25 @@
 // @ts-ignore
-import App from "containers/App";
-import { createBrowserHistory } from "history";
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { Router } from "react-router";
+import { ConnectedRouter } from "connected-react-router"
+// @ts-ignore
+import App from "containers/App"
+import * as React from "react"
+import * as ReactDOM from "react-dom"
+import { Provider } from "react-redux"
+import { Router } from "react-router"
+import configureStore from "./configureStore"
+import { initialState } from "./store"
+import { history } from "./utils/history"
 
-const history = createBrowserHistory();
-
+const store = configureStore(history, initialState)
 ReactDOM.render(
-  <Router history={history}>
-    <App />
-  </Router>,
+  <Provider store={store}>
+    <Router history={history}>
+      <App />
+    </Router>
+  </Provider>,
   document.getElementById("app")
-);
+)
 
 if (process.env.NODE_ENV === "production") {
-  require("offline-plugin/runtime").install(); // eslint-disable-line global-require
+  require("offline-plugin/runtime").install() // eslint-disable-line global-require
 }
