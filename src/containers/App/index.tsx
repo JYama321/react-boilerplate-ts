@@ -1,9 +1,9 @@
 // @ts-ignore
-import { Hello } from "components/Hello"
-import * as React from "react"
-import { Helmet } from "react-helmet"
-import { Route, Switch } from "react-router-dom"
-import { AppWrapper } from "./appWrapper"
+import Top from "containers/Top";
+import * as React from "react";
+import { Helmet } from "react-helmet";
+import { Route, Switch } from "react-router-dom";
+import { AppWrapper } from "./appWrapper";
 
 class App extends React.Component {
   public render() {
@@ -16,11 +16,11 @@ class App extends React.Component {
           <meta name="description" content="React Ts Boilerplate" />
         </Helmet>
         <Switch>
-          <Route exact={true} path="/" render={() => <Hello />} />
+          <Route exact={true} path="/" component={Top} />
         </Switch>
       </AppWrapper>
-    )
+    );
   }
 }
 
-export default App
+export default App;

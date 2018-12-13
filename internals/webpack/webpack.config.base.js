@@ -1,10 +1,15 @@
 const path = require('path');
 const webpack = require('webpack');
+const sourcePath = path.join(process.cwd(), 'src');
 
 process.noDeprecation = true;
 
 module.exports =  options => ({
   mode: options.mode,
+  context: sourcePath,
+
+  entry: options.entry,
+
   output: Object.assign(
     {
       path: path.join(process.cwd(),"dist"),

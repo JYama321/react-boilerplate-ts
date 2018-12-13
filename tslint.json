@@ -8,7 +8,7 @@
     "jsRules": {},
     "rules": {
         "prettier": [true, {
-            "semi": false
+            "semi": true
         }],
         "no-console": false,
         "variable-name": [
@@ -20,7 +20,8 @@
         ],
         "no-var-requires": false,
         "interface-name": false,
-        "semicolon": [true, "always"]
+        "semicolon": [true, "always"],
+        "object-literal-sort-keys": true
     },
     "rulesDirectory": ["tslint-plugin-prettier"],
     "linterOptions": {"exclude": [

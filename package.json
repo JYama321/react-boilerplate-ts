@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config internals/webpack/webpack.config.prod.js --color -p --progress --hide-modules --display-optimization-bailout",
-    "build:dev": "cross-env NODE_ENV=production webpack --config ./internals/webpack/webpack.config.dev.js",
+    "build": "webpack --config internals/webpack/webpack.config.dev.js --color -p --progress --hide-modules --display-optimization-bailout",
+    "build:production": "cross-env NODE_ENV=production webpack --config ./internals/webpack/webpack.config.prod.js",
     "start": "cross-env NODE_ENV=development node server",
     "clean": "rimraf ./dist/**/*",
     "tslint": "tslint --fix --force --format stylish --project ./tsconfig.json ./{src,__tests__}/**/*.{ts,tsx}"

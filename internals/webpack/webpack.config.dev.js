@@ -6,8 +6,10 @@ const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 module.exports = require('./webpack.config.base')({
   mode: 'development',
+
   entry: [
     require.resolve('react-app-polyfill/ie11'),
+    'webpack-hot-middleware/client?reloat=true',
     path.join(process.cwd(),"src/index.tsx")
   ],
 
@@ -21,6 +23,7 @@ module.exports = require('./webpack.config.base')({
         chunks: 'all',
     }
   },
+
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
