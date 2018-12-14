@@ -1,5 +1,6 @@
 import * as React from "react";
-import { HelloMessage } from "../containers/Top/style";
+// @ts-ignore
+import { HelloMessage } from "./style";
 
 class Hello extends React.Component<{}> {
   public render() {

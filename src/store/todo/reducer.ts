@@ -1,6 +1,5 @@
 import { Reducer } from "redux";
-import { TodoActionTypes, TodoState } from "./types";
-
+import { Todo, TodoActionTypes, TodoState } from "./types";
 const initialState: TodoState = {
   todo: []
 };
@@ -8,11 +7,14 @@ const initialState: TodoState = {
 const reducer: Reducer<TodoState> = (state = initialState, action) => {
   switch (action.type) {
     case TodoActionTypes.ADD_TODO: {
-      return { ...state, todos: state.todo.push(action.payload) };
+      // 元の配列を値渡し
+      const newTodo: Todo[] = state.todo.slice();
+      newTodo.push(action.payload);
+      return Object.assign({}, state, { todo: newTodo });
     }
     case TodoActionTypes.REMOVE_TODO: {
       state.todo.splice(action.payload, 1);
-      return { ...state, todos: state.todo };
+      return { ...state, todo: state.todo };
     }
     case TodoActionTypes.FETCH_TODOS: {
       return { ...state };

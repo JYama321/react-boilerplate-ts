@@ -7,7 +7,12 @@ export interface TodoState {
   readonly todo: Todo[];
 }
 export const initialTodoState: TodoState = {
-  todo: []
+  todo: [
+    {
+      done: false,
+      title: "UNKO"
+    }
+  ]
 };
 
 export const enum TodoActionTypes {

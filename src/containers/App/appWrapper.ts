@@ -7,5 +7,5 @@ export const AppWrapper: any = styled.div`
   min-height: 100%;
   padding: 0 16px;
   flex-direction: column;
-  color: "rgb(0,0,255)";
+  color: rgb(0, 0, 255);
 `;
