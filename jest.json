@@ -8,12 +8,14 @@
     "tsx"
   ],
   "setupFiles": [
-    "<roodDir>/test/polyfills.js"
+    "<rootDir>/internals/test/polyfills.js",
+    "<rootDir>/internals/test/setupTest.ts"
   ],
   "testURL": "http://localhost/",
   "transform": {
-    "^.+\\(ts|tsx)$": "ts-jest"
+    "\\.(ts|tsx)$": "ts-jest"
   },
   "restoreMocks": true,
-  "snapshotSerializers": ["enzyme-to-json"]
+  "snapshotSerializers": ["enzyme-to-json"],
+  "coveragePathIgnorePatterns": ["<rootDir>/node_modules/"]
 }

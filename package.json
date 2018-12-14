@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest -c ./jest.json",
     "build": "webpack --config internals/webpack/webpack.config.dev.js --color -p --progress --hide-modules --display-optimization-bailout",
     "build:production": "rimraf ./dist/* && cross-env NODE_ENV=production webpack --config ./internals/webpack/webpack.config.prod.js",
     "start": "cross-env NODE_ENV=development node server",
+    "test": "jest -c ./jest.json",
     "clean": "rimraf ./dist/*",
     "tslint": "tslint --fix --force --format stylish --project ./tsconfig.json ./{src,__tests__}/**/*.{ts,tsx}"
   },
