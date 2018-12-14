@@ -1,0 +1,19 @@
+{
+  "rootDir": "./",
+  "testRegex": "\\.spec\\.tsx?$",
+  "moduleFileExtensions": [
+    "js",
+    "jsx",
+    "ts",
+    "tsx"
+  ],
+  "setupFiles": [
+    "<roodDir>/test/polyfills.js"
+  ],
+  "testURL": "http://localhost/",
+  "transform": {
+    "^.+\\(ts|tsx)$": "ts-jest"
+  },
+  "restoreMocks": true,
+  "snapshotSerializers": ["enzyme-to-json"]
+}
