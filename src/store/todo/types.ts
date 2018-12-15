@@ -18,5 +18,6 @@ export const initialTodoState: TodoState = {
 export const enum TodoActionTypes {
   ADD_TODO = "@@todos/ADD_TODO",
   REMOVE_TODO = "@@todos/REMOVE_TODO",
-  FETCH_TODOS = "@@todos/FETCH_TODOS"
+  FETCH_TODOS = "@@todos/FETCH_TODOS",
+  FINISH_FETCH_TODO = "@@todos/FINISH_FETCH_TODO"
 }

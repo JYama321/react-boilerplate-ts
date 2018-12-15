@@ -10,7 +10,7 @@ import { initialTodoState, TodoState } from "./todo/types";
 export interface ApplicationState {
   heroes: HeroesState;
   layout: LayoutState;
-  todos: TodoState;
+  todo: TodoState;
 }
 
 export interface ConnectedReduxProps<A extends Action = AnyAction> {
@@ -20,13 +20,13 @@ export interface ConnectedReduxProps<A extends Action = AnyAction> {
 export const initialState: ApplicationState = {
   heroes: initialHeroesState,
   layout: initialLayoutState,
-  todos: initialTodoState
+  todo: initialTodoState
 };
 
 export const rootReducer = combineReducers<ApplicationState>({
   heroes: heroesReducer,
   layout: layoutReducer,
-  todos: todoReducer
+  todo: todoReducer
 });
 
 export function* rootSaga() {
