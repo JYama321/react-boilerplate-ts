@@ -25,9 +25,12 @@ class Top extends React.Component<AllProps> {
     });
   }
 
-  public addTodo(todo: Todo) {
-    this.props.addTodo(todo);
-  }
+  public addTodo = () => {
+    this.props.addTodo({
+      done: false,
+      title: "unko"
+    });
+  };
 
   public fetchRequest() {
     this.props.fetchRequest();
@@ -38,21 +41,10 @@ class Top extends React.Component<AllProps> {
     return (
       <TopWrapper>
         <Hello />
-        <ButtonNormal
-          text={"AddTodoButton"}
-          onclick={() =>
-            this.addTodo({
-              title: "unko",
-              done: false
-            })
-          }
-        />
+        <ButtonNormal text={"AddTodoButton"} onclick={this.addTodo} />
         <ul>{todo}</ul>
         <h2>fetch heroes</h2>
-        <ButtonNormal
-          text={"Fetch heroes"}
-          onclick={() => this.props.fetchRequest()}
-        />
+        <ButtonNormal text={"Fetch heroes"} onclick={this.props.fetchRequest} />
       </TopWrapper>
     );
   }

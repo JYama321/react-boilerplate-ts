@@ -17,13 +17,14 @@
 
 
 ### Typescript-react-redux
-[https://medium.com/@resir014/redux-4-typescript-2-9-a-type-safe-approach-7f073917b803](https://medium.com/@resir014/redux-4-typescript-2-9-a-type-safe-approach-7f073917b803)
+[https://medium.com/@resir014/redux-4-typescript-2-9-a-type-safe-approach-7f073917b803](https://medium.com/@resir014/redux-4-typescript-2-9-a-type-safe-approach-7f073917b803)  
+[Reactでのallow-functionとshallow renderingについて](https://maarten.mulders.it/blog/2017/07/no-bind-or-arrow-in-jsx-props-why-how.html)  
 
 
 ### Test(Jest, Enzyme)
 [https://rjzaworski.com/2018/03/testing-with-typescript-react-and-enzyme](https://rjzaworski.com/2018/03/testing-with-typescript-react-and-enzyme)  
-[Jest公式document](https://jestjs.io/docs/ja/api)
-
+[Jest公式document](https://jestjs.io/docs/ja/api)  
+[Redux Test Reducer](https://alligator.io/react/testing-redux-reducers/)
 
 ### Styled-components
 
