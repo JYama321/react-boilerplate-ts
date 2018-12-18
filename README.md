@@ -6,11 +6,10 @@ Typescript,React-boilerplate開発のテンプレ。react-boilerplateをベー�
 
 React,Redux,Redux-saga,Typescript,Jest,Enzymeを使用
 
-## Test server
-
-Express
+## Setup dev server
 
 ```
+npm install
 npm start
 ```
 
